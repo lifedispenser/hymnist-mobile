@@ -26,5 +26,7 @@ The shared folder contains all assets that do not get compiled and all precompil
 * sass
 
 We use [nunjucks](https://github.com/mozilla/nunjucks) to render templates into html.
-We use [sass](http://sass-lang.com) and [BEM](https://en.bem.info/) for our css styles.
+
+We use [sass](http://sass-lang.com), [bootstrap](http://getbootstrap.com) and [BEM](https://en.bem.info/) for our css styles.
+
 Finally, we use [gulp](http://gulpjs.com) to compile and build our html templates.
