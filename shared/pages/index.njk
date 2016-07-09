@@ -1,0 +1,14 @@
+{% set header = {
+	title: ''
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<div class="main">
+	<h2 class="main__title">Hymnist is a place to share and listen to music in the church life.</h2>
+	<a href="radio.html" class="main__link main__link--spotlight">Listen to Radio</a>
+	<a href="playlist.html" class="main__link">Listen to Your Playlist</a>
+</div>
+{% include "../partials/search.njk" %}
+{% endblock %}

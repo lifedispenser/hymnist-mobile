@@ -1,0 +1,25 @@
+{
+  "name": "templates",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "dbarabashdev"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mytekoa/templates",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.5.1",
+    "wow": "wow.js#~1.1.2",
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "compass-sass-mixins": "*"
+  }
+}

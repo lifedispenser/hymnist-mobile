@@ -1,0 +1,22 @@
+{% set header = {
+	title: 'Albums'
+} %}
+{% set bot = {
+	left: '+ Upload Album',
+	lhref: 'new_album.html'
+} %}
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+{% set album = {
+	title: 'Green Room',
+	author: 'Titus J, Spencer Y, Phil B, Mary J'
+} %}
+{% include "../partials/album.njk" %}
+{% include "../partials/album.njk" %}
+{% include "../partials/album.njk" %}
+{% include "../partials/album.njk" %}
+{% include "../partials/album.njk" %}
+
+{% include "../partials/bot.njk" %}
+{% endblock %}

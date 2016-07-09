@@ -1,0 +1,39 @@
+.navbar {
+	background: transparent!important;
+	box-shadow: none;
+	border-color:transparent;
+	&-brand {
+		color: $tan!important;
+		text-shadow: none;
+		font-family: "Cherry Swash", cursive;
+		font-size: $fs-large;
+	}
+	&-toggle {
+		border:none;
+		.icon-bar {
+			background-color: $tan!important;
+			font-size: $fs-large;
+		}
+		&:hover, &:focus {
+			background-color: $white-tint!important;
+		}
+	}
+	&-title {
+		position:absolute;
+		width: 200px;
+		left: 50%;
+		margin-left: -100px;
+		text-align: center;
+		text-outline: 10px;
+		font-size: $fs-large;
+		color:white;
+		top:10px;
+	}
+	&-text {
+		display:inline;
+		float:right;
+		color: $white!important;
+		font-size: $fs-small;
+
+	}
+}

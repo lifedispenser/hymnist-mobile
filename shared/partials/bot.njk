@@ -1,0 +1,25 @@
+<div class="bot {% if bot.relative %}
+bot--relative
+{% endif %}">
+	{% if bot.search %}
+		<input type="text" class="bot__search">
+	{% endif %}
+	{% if bot.text %}
+		<div class="bot__text">
+			{{bot.text}}
+		</div>
+	{% endif %}
+	{% if bot.right %}
+		<a href="{{bot.lhref}}" class="bot__btn bot__btn--left">
+			{{bot.left}}
+		</a>
+		<a href="{{bot.rhref}}" class="bot__btn bot__btn--right">
+			{{bot.right}}
+		</a>
+	{% else %}
+	<a href="{{bot.lhref}}" class="bot__btn">
+		{{bot.left}}
+	</a>
+	{% endif %}
+
+</div>

@@ -1,0 +1,27 @@
+{% set header = {
+	title: 'Album Details'
+} %}
+{% set bot = {
+	left: 'Cancel',
+	lhref: 'albums.html',
+	right: 'Save & Add Songs',
+	rhref: 'add_songs.html'
+} %}
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<form method="post">
+<div class="main">
+	<div class="wrap">
+		<div class="main__picwrap">
+			<a class="main__picture">+</a>
+		</div>
+		<label href="#" class="main__label">Title</label>
+		<input type="text" name="name" value="" class="main__input" />
+		<label href="#" class="main__label">Artist</label>
+		<input type="text" name="name" value="" class="main__input" />
+	</div>
+</div>
+{% include "../partials/bot.njk" %}
+</form>
+{% endblock %}

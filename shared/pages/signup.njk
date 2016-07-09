@@ -1,0 +1,20 @@
+{% set header = {
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<div class="main">
+	<h2 class="main__title"><b>Sign up</b> to upload albums and make playlists.</h2>
+	<div class="wrap">
+		<label href="#" class="main__label">Email</label>
+		<input type="text" name="name" value="" class="main__input"/>
+		<label href="#" class="main__label">Password</label>
+		<input type="text" name="name" value="" class="main__input"/>
+		<label href="#" class="main__label">Confirm Password</label>
+		<input type="text" name="name" value="" class="main__input"/>
+		<input type="submit" name="name" value="Sign Up" class="main__button"/>
+		<a href="login.html" class="main__link main__link--small">Back to Login</a>
+	</div>
+</div>
+{% endblock %}

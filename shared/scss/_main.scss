@@ -1,0 +1,91 @@
+.main {
+	
+	&__picwrap, &__picture {
+		width:160px;
+		height:160px;
+	}
+	&__picwrap {
+		position: relative;
+		margin:40px auto;
+		background-color: $purple;
+	}
+	&__picture {
+		display: table-cell;
+		vertical-align: middle;
+		text-align:center;
+		color: $white;
+		font-size: 60px;
+		&:hover, &:visited {
+			text-decoration: none;
+			background-color: darken($purple, 2);
+			color:$white;
+		}
+	}
+	&__title {
+		text-align: center;
+		font-size: 19px; //unique font size!
+		color: $white;
+		width: 280px;
+		margin: 40px auto 60px;
+	}
+	&__link {
+		display:block;
+		width:300px;
+		margin:20px auto 40px;
+		font-size: $fs-h4;
+		text-align: center;
+		color: $white;
+		padding:20px 0;
+		&:hover {
+			color: $white;
+		}
+		&--spotlight {
+			border: 1px solid $white;
+			font-size: $fs-h2;
+		}
+		&--highlight {
+			background-color: $white-tint;
+		}
+		&--small {
+			font-size: $fs-h4;
+		}
+		&--nospace {
+			margin:0 auto;
+			padding:15px 0;
+		}
+		&--subdued {
+			opacity:.6;
+		}
+	}
+	.wrap {
+		width: 100%;
+		padding:0 30px;
+	}
+	&__label {
+		display:block;
+		width:100%;
+		text-align: center;
+		color: $white;
+		font-size: $fs-h4;
+		font-weight: lighter;
+
+	}
+	&__input {
+		width:100%;
+		margin-bottom:20px;
+	}
+
+	&__button {
+		margin-top:20px;
+		width:100%;
+		background-color: $red;
+		border:none;
+		padding:10px;
+		font-size: $fs-h4;
+		color: $white;
+		&:hover, &:focus {
+			outline-color: $red;
+			outline-width: 1px;
+		}
+	}
+}

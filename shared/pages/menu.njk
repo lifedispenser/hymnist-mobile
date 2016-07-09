@@ -1,0 +1,17 @@
+{% set header = {
+	name: "lifedispenser@gmail.com"
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<div class="main">
+	<br><br>
+	<a href="albums.html" class="main__link main__link--nospace main__link--highlight">Albums</a>
+	<a href="new_album.html" class="main__link main__link--nospace">+ Upload Album</a>
+	<a href="playlist.html" class="main__link main__link--nospace">My Playlist</a>
+	<a href="radio.html" class="main__link main__link--nospace">Radio</a>
+	<a href="login.html" class="main__link main__link--nospace main__link--subdued">Log out</a>
+</div>
+{% include "../partials/search.njk" %}
+{% endblock %}

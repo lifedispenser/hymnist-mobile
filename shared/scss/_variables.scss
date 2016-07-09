@@ -1,0 +1,25 @@
+$fs-base:          16px !default;
+$fs-large:         ceil(($fs-base * 1.25)) !default; // ~20px
+$fs-small:         ceil(($fs-base * 0.85)) !default; // ~14px
+
+$fs-h1:            26px !default; // ~26px
+$fs-h2:            24px !default; // ~24px
+$fs-h3:            22px !default; // ~22px
+$fs-h4:            20px !default; // ~20px
+$fs-h5:            18px !default;
+$fs-h6:            16px !default; // ~14px
+
+
+// colors
+$top-blue: #889EDC;
+$blue: rgba(136,158,220, .7);
+$bot-red: #F49696;
+$white: #FEFCEC;
+$tan: #FFF9DE;
+$dark-tan: #ECE3BC;
+$white-tint : rgba(254,252,236,.2);
+$whiter-tint : rgba(254,252,236,.1);
+$white: #FEFCEC;
+$red: #E77070;
+$purple: #B187D5;
+// colors end

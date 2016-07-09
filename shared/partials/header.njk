@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+			<a class="navbar-brand" href="index.html">H</a>
+      {% if header.title %}
+        <div class="navbar-title">{{header.title}}</div>
+      {% endif %}
+			<a class="navbar-toggle collapsed" href="menu.html">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      {% if header.name %}
+        <p class="navbar-text navbar-right">{{header.name}}</p>
+      {% endif %}
+
+
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,18 @@
+.search {
+	width:100%;
+	padding:30px;
+	&--bot {
+		position: fixed;
+		bottom: 0;
+	}
+	&__subtitle {
+		text-align: center;
+		font-size: $fs-h4;
+		color:$white;
+		padding-bottom: 15px;
+	}
+	&__input {
+		//inherits from input[type='text']
+		width:100%;
+	}
+}

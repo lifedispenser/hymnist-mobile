@@ -1,0 +1,29 @@
+$h: 80px;
+.album {
+	width:100%;
+	height:$h;
+	margin-top: 5px;
+
+	&:hover, &:focus {
+		background-color: $white-tint;
+	}
+	&__picture {
+		position: absolute;
+		width:$h;
+		height:$h;
+		background-color: gray;
+		background-position: center;
+		background-size: cover;
+	}
+	&__title {
+		margin-left:$h+10;
+		padding:12px 0 3px;
+		color:$white;
+		font-size: $fs-h5;
+	}
+	&__author {
+		margin-left:$h+10;
+		color:$white;
+		font-size: $fs-small;
+	}
+}

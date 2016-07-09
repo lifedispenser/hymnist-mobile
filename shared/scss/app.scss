@@ -1,0 +1,40 @@
+@import "_variables";
+@import "bootstrap";
+@import "bootstrap/theme";
+@import "bower_components/compass-sass-mixins/lib/compass";
+
+@import "_main";
+@import "_bot";
+@import "_header";
+@import "_search";
+@import "_album";
+@import "_aplayer";
+
+body {
+	padding-top: $navbar-height;
+	font-family: 'Lato', sans-serif;
+}
+
+.bg {
+	z-index:-1;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	background-color: #889edc; // Old browsers
+	height:100%;
+	@include filter-gradient(#889edc, #f49696, vertical); // IE6-9
+	@include background(linear-gradient(top, #889edc 0%,#f49696 100%));
+}
+
+input[type='text'] {
+	background-color: $white-tint;
+	border:none;
+	padding:10px;
+	font-size: $fs-h4;
+	color: $white;
+	&:hover, &:focus {
+		outline-color: $tan;
+		outline-width: 1px;
+	}
+}

@@ -1,0 +1,421 @@
+//Aplayer height values
+$aplayer-height: 80px;
+$lrc-height: 50px;
+$aplayer-height-lrc: $aplayer-height + $lrc-height;
+
+@font-face {
+	font-family: 'aplayer-fontello';
+	src: url('../../shared/fonts/aplayer-fontello.eot?72550380');
+	src: url('../../shared/fonts/aplayer-fontello.eot?72550380#iefix') format('embedded-opentype'), url('../../shared/fonts/aplayer-fontello.woff?72550380') format('woff'), url('font/aplayer-fontello.ttf?72550380') format('truetype'), url('../../shared/fonts/aplayer-fontello.svg?72550380#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//TODO: MAKE APLAYER BEM STYLE!!! IMPORTANT !!!
+.aplayer {
+	margin: 0;
+	overflow: hidden;
+	user-select: none;
+	line-height: initial;
+	color: $white;
+	* {
+		box-sizing: content-box;
+	}
+	/* player */
+	//pic + play button
+	&__pic {
+		position: relative;
+		float: left;
+		height: $aplayer-height;
+		width: $aplayer-height;
+		background-image: url("./default.jpg");
+		background-size: 100%;
+		transition: all 0.3s ease;
+	}
+	&__button {
+		position: absolute;
+		color: $white;
+		border-radius: 50%;
+		opacity: 0.8;
+		cursor: pointer;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+		background: rgba(0, 0, 0, 0.2);
+		transition: all 0.1s ease;
+		&--play {
+			width: 26px;
+			height: 26px;
+			border: 2px solid $white;
+			bottom: 50%;
+			right: 50%;
+			margin: 0 -15px -15px 0;
+		}
+		&--pause {
+			width: 16px;
+			height: 16px;
+			border: 2px solid $white;
+			bottom: 4px;
+			right: 4px;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	//album info
+	&__info {
+		margin-left: $aplayer-height;
+		padding: 18px 7px 0 10px;
+		height: $aplayer-height;
+		background-color: $white-tint;
+		box-sizing: border-box;
+	}
+	&__infowrap {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin-bottom: 17px;
+	}
+	&__title {
+		font-size: 14px;
+	}
+	&__author {
+		font-size: 12px;
+		color: $tan;
+	}
+
+	//timebar
+	&__controller {
+		position: relative;
+	}
+	&__barwrap {
+		margin: 0 140px 0 5px;
+	}
+	&__bar {
+		position: relative;
+		height: 2px;
+		width: 100%;
+		background: $dark-tan;
+		cursor: pointer !important;
+	}
+	&__loaded {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		background: $tan;
+		height: 2px;
+		transition: all 0.5s ease;
+	}
+	&__played {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		height: 2px;
+	}
+	&__thumb {
+		position: absolute;
+		top: 0;
+		right: 5px;
+		margin-top: -4px;
+		margin-right: -10px;
+		height: 8px;
+		width: 8px;
+		border-radius: 50%;
+		background: $red;
+		cursor: pointer !important;
+	}
+
+	//controls
+	&__controls {
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		height: 17px;
+		color: $tan;
+		font-size: 11px;
+		i {
+			color: $tan;
+			font-size: 15px;
+			cursor: pointer;
+			transition: all 0.2s ease;
+
+			&:hover {
+				color: #dark-tan;
+			}
+		}
+		&--narrow {
+			.aplayer-icon-loop, .player-icon-menu {
+				display: none;
+			}
+		}
+	}
+	&__volumewrap {
+		position: relative;
+		display: inline-block;
+		margin-left: 3px;
+		cursor: pointer !important;
+		&:hover {
+			.aplayer__volumebarwrap {
+ 				display: block;
+ 			}
+		}
+	}
+	&__volumebarwrap {
+		display: none;
+		position: absolute;
+		bottom: 17px;
+		right: -5px;
+		width: 25px;
+		height: 40px;
+		z-index: 99;
+	}
+	&__volumebar {
+		position: absolute;
+		bottom: 0;
+		right: 10px;
+		width: 5px;
+		height: 35px;
+		background: $tan;
+	}
+	&__volumebarinner {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 5px;
+		transition: all 0.1s ease;
+	}
+
+
+	/* icons */
+	[class*=" aplayer__icon--"]:before,
+	[class^="aplayer__icon--"]:before {
+		font-family: "aplayer-fontello";
+		font-style: normal;
+		font-weight: normal;
+		display: inline-block;
+		text-decoration: inherit;
+		width: 1em;
+		text-align: center;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1em;
+	}
+
+	&__icon {
+		&--play {
+			position: absolute;
+			top: 2px;
+			left: 4px;
+			font-size: 20px;
+			line-height: 23px;
+		}
+		&--play:before {
+			content: '\e806';
+		}
+		&--pause {
+			position: absolute;
+			top: 1px;
+			left: 2px;
+			font-size: 12px;
+			line-height: 14px;
+		}
+		&--pause:before {
+			content: '\e807';
+		}
+		&--to-start:before {
+			content: '\e808';
+		}
+		&--to-end:before {
+			content: '\e809';
+		}
+		&--loop {
+			margin-right: 4px;
+		}
+		&--noloop {
+			color: #ddd;
+			&:hover {
+				color: #bbb;
+			}
+		}
+		&--loop:before {
+			content: '\e803';
+		}
+		&--menu:before {
+			content: '\e80b';
+		}
+		&--volumeoff:before {
+			content: '\e800';
+		}
+		&--volumedown:before {
+			content: '\e801';
+		}
+		&--volumeup:before {
+			content: '\e802';
+		}
+	}
+	/* END icons */
+
+	/* Modifiers */
+	&--hide {
+		display: none;
+	}
+	&--narrow {
+		width: $aplayer-height;
+		.aplayer__info {
+			display: none;
+		}
+	}
+	&--withlrc {
+		&.aplayer--narrow {
+			width: $aplayer-height-lrc;
+		}
+		&.aplayer .aplayer__pic {
+			height: $aplayer-height-lrc;
+			width: $aplayer-height-lrc;
+		}
+		&.aplayer .aplayer__info {
+			margin-left: $aplayer-height-lrc;
+			height: $aplayer-height-lrc;
+		}
+		&.aplayer .aplayer-lrc {
+			display: block;
+		}
+	}
+	&__lrcwrap {
+		display: none;
+		position: relative;
+		height: $lrc-height;
+		background: $white;
+		text-align: center;
+		overflow: hidden;
+		margin: -10px 0 10px;
+		&:before {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			height: 10%;
+			content: ' ';
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '$whitefff', endColorstr='#00ffffff',GradientType=0 );
+		}
+		&:after {
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			height: 33%;
+			content: ' ';
+			background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+			background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00ffffff', endColorstr='$whitefff',GradientType=0 );
+		}
+		p {
+			font-size: 12px;
+			color: $tan;
+			line-height: 20px !important;
+			height: 20px !important;
+			padding: 0 !important;
+			margin: 0 !important;
+			transition: all 0.5s ease-out;
+			opacity: 0.4;
+			overflow: hidden;
+		}
+		&--current {
+			opacity: 1;
+		}
+		&--content {
+			display: none;
+		}
+	}
+	&__lrc {
+		width: 100%;
+		transition: all 0.5s ease-out;
+	}
+}
+
+//aplayerlist is specific to aplayer, playlist is a generic playlist that
+//reuses this css
+.aplayerlist, .playlist {
+	max-height: calc(100vh - 170px); //80px|player + 50px|header + 40px|footer
+	overflow: scroll;
+	transition: all 0.5s ease;
+	&--shortened {
+		max-height: calc(100vh - 210px); //80px|player + 50px|header + 80px|footer
+	}
+	&--hide {
+		max-height: 0;
+	}
+	ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			position: relative;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 15px;
+			font-size: 12px;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			&:hover {
+				background: $white-tint;
+			}
+		}
+	}
+	&__cur {
+		display: none;
+		width: 3px;
+		height: 30px;
+		position: absolute;
+		left: 0;
+		top: 5px;
+		cursor: pointer;
+		background-color: $white;
+	}
+	&__index {
+		color: $white;
+		margin-right: 12px;
+		cursor: pointer;
+	}
+	&__author {
+		color: $white;
+		float: right;
+		cursor: pointer;
+	}
+	&__title {
+		color:$white;
+		cursor: pointer;
+	}
+	&__heart {
+		color:$white;
+		float:right;
+		cursor:pointer;
+		padding-left: 15px;
+	}
+
+	&--light {
+		background: $blue;
+		&__cur {
+			display: inline-block;
+		}
+	}
+}
+
+@keyframes aplayer-roll {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}

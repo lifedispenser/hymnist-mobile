@@ -1,0 +1,40 @@
+{% set header = {
+	title: 'Edit Album'
+} %}
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+{% set album = {
+	title: 'Green Room',
+	author: 'Titus J, Spencer Y, Phil B, Mary J'
+} %}
+{% include "../partials/album.njk" %}
+
+{% set bot = {
+	relative: true,
+	left: 'Edit Album',
+	lhref: 'new_album.html',
+	right: 'Delete Album!',
+	rhref: 'delete.html'
+} %}
+{% include "../partials/bot.njk" %}
+<div class="playlist">
+	<div class="aplayerlist aplayerlist--shortened ">
+		<ol>
+			<li>
+	        <span class="aplayerlist__index">1</span>
+	        <span class="aplayerlist__title">Preparation</span>
+	        <span class="aplayerlist__author">Hans Zimmer/Richard Harvey</span>
+	    </li>
+		</ol>
+	</div>
+</div>
+
+{% set bot = {
+	left: 'Upload Song(s)',
+	right: 'Save & Finish',
+	rhref: 'albums.html'
+} %}
+{% include "../partials/bot.njk" %}
+</form>
+{% endblock %}

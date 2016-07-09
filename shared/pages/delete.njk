@@ -1,0 +1,19 @@
+{% set header = {
+	title: 'Delete Album'
+} %}
+{% set bot = {
+	left: 'No, Cancel',
+	lhref: 'add_songs.html',
+	right: 'Yes, Delete',
+	rhref: 'albums.html'
+} %}
+
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<div class="main">
+	<h2 class="main__title">Are you sure you want to delete this album?</h2>
+</div>
+{% include "../partials/bot.njk" %}
+{% endblock %}

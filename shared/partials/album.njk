@@ -1,0 +1,12 @@
+<div class="album">
+	<div class="album__picture" {% if album.picture %}
+		style="background: url({{album.picture}})"
+	{% endif %}>
+	</div>
+	<div class="album__title">
+		{{album.title}}
+	</div>
+	<div class="album__author">
+		{{album.author}}
+	</div>
+</div>
