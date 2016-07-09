@@ -27,12 +27,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mytekoa/templates.git"
+    "url": "git+https://github.com/lifedispenser/hymnist-mobile.git"
   },
-  "author": "dbarabashdev",
+  "author": "sying",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mytekoa/templates/issues"
+    "url": "https://github.com/lifedispenser/hymnist-mobile/issues"
   },
-  "homepage": "https://github.com/mytekoa/templates#readme"
+  "homepage": "https://github.com/lifedispenser/hymnist-mobile#readme"
 }
