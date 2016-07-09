@@ -6355,7 +6355,7 @@ button.close {
 .bot {
   position: fixed;
   bottom: 0;
-  width: 100%; }
+  width: inherit; }
   .bot--relative {
     position: relative;
     display: inline-block; }
@@ -6719,17 +6719,17 @@ button.close {
 
 .aplayerlist, .playlist {
   max-height: calc(100vh - 170px);
-  overflow: scroll;
+  overflow-x: auto;
   transition: all 0.5s ease; }
   .aplayerlist--shortened, .playlist--shortened {
     max-height: calc(100vh - 210px); }
   .aplayerlist--hide, .playlist--hide {
     max-height: 0; }
-  .aplayerlist ol, .playlist ol {
+  .aplayerlist ul, .playlist ul {
     list-style-type: none;
     margin: 0;
     padding: 0; }
-    .aplayerlist ol li, .playlist ol li {
+    .aplayerlist ul li, .playlist ul li {
       position: relative;
       height: 40px;
       line-height: 40px;
@@ -6737,7 +6737,7 @@ button.close {
       font-size: 12px;
       cursor: pointer;
       transition: all 0.2s ease; }
-      .aplayerlist ol li:hover, .playlist ol li:hover {
+      .aplayerlist ul li:hover, .playlist ul li:hover {
         background: rgba(254, 252, 236, 0.2); }
   .aplayerlist__cur, .playlist__cur {
     display: none;
@@ -6795,6 +6795,28 @@ body {
   background: -o-linear-gradient(top, #889edc 0%, #f49696 100%);
   -pie-background: -pie-linear-gradient(top, #889edc 0%, #f49696 100%);
   background: linear-gradient(top, #889edc 0%, #f49696 100%); }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(254, 252, 236, 0.2); }
+
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+body {
+  scrollbar-face-color: rgba(254, 252, 236, 0.2);
+  scrollbar-track-color: transparent; }
+
+.main-wrap {
+  width: 100%; }
+  @media only screen and (min-width: 40.063em) {
+    .main-wrap {
+      width: 600px;
+      margin: 0 auto;
+      position: relative; } }
 
 input[type='text'] {
   background-color: rgba(254, 252, 236, 0.2);

@@ -8,6 +8,7 @@ npm i && bower i
 gulp build
 ```
 Visit /build/index.html
+Make sure you turn on MOBILE VIEW in the browser (on chrome, inspect element, toggle device view & select a phone).
 
 
 ## To work on:

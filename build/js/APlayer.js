@@ -214,7 +214,7 @@
             if (this.multiple) {
                 eleHTML += `
                 <div class="aplayerlist">
-                    <ol>`;
+                    <ul>`;
                 for (i = 0; i < this.option.music.length; i++) {
                     eleHTML += `
                         <li>
@@ -226,7 +226,7 @@
                         </li>`
                 }
                 eleHTML += `
-                    </ol>
+                    </ul>
                 </div>`
             }
             this.element.innerHTML = eleHTML;

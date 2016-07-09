@@ -26,6 +26,16 @@ body {
 	@include filter-gradient(#889edc, #f49696, vertical); // IE6-9
 	@include background(linear-gradient(top, #889edc 0%,#f49696 100%));
 }
+@include scrollbars(6px, $white-tint, transparent);
+
+.main-wrap {
+	width:100%;
+	@include bp(medium) {
+		width: 600px;
+		margin: 0 auto;
+		position: relative;
+	}
+}
 
 input[type='text'] {
 	background-color: $white-tint;

@@ -23,3 +23,50 @@ $white: #FEFCEC;
 $red: #E77070;
 $purple: #B187D5;
 // colors end
+
+// scrollbars mixin
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+// Breakpoint mixins
+@mixin bp($point) {
+  @if $point == medium { // 641px, 1024px
+    @media only screen and (min-width: 40.063em) { @content; }
+  }
+  @else if $point == large { // 1025px, 1440px
+    @media only screen and (min-width: 64.063em) { @content; }
+  }
+  @else if $point == xlarge { // 1441px, 1920px
+    @media only screen and (min-width: 90.063em) { @content; }
+  }
+  @else if $point == xxlarge { // 1921px and up
+    @media only screen and (min-width: 120.063em)  { @content; }
+  }
+  @else if $point == retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+           only screen and (min--moz-device-pixel-ratio: 1.5),
+           only screen and (min-device-pixel-ratio: 1.5) { @content; }
+  }
+  @else if $point == iphone { // an iPhone 5
+    @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) { @content }
+  }
+}

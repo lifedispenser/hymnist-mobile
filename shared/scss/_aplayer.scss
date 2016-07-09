@@ -347,7 +347,7 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 //reuses this css
 .aplayerlist, .playlist {
 	max-height: calc(100vh - 170px); //80px|player + 50px|header + 40px|footer
-	overflow: scroll;
+	overflow-x: auto;
 	transition: all 0.5s ease;
 	&--shortened {
 		max-height: calc(100vh - 210px); //80px|player + 50px|header + 80px|footer
@@ -355,7 +355,7 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 	&--hide {
 		max-height: 0;
 	}
-	ol {
+	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
