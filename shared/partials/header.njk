@@ -1,7 +1,13 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
+      {% if header.now_playing %}
+      <a class="navbar-np" href="playlist.html"><< Now Playing</a>
+      {% elif header.search %}
+      <a class="navbar-np" href="search.html"><< Search Results</a>
+      {% else %}
 			<a class="navbar-brand" href="index.html">H</a>
+      {% endif %}
       {% if header.title %}
         <div class="navbar-title">{{header.title}}</div>
       {% endif %}

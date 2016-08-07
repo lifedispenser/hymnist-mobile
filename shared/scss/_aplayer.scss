@@ -346,9 +346,13 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 //aplayerlist is specific to aplayer, playlist is a generic playlist that
 //reuses this css
 .aplayerlist, .playlist {
+	position: relative;
 	max-height: calc(100vh - 170px); //80px|player + 50px|header + 40px|footer
 	overflow-x: auto;
 	transition: all 0.5s ease;
+	&--shortened-double {
+		max-height: calc(100vh - 260px); //80px|player + 100px|header + 80px|footer
+	}
 	&--shortened {
 		max-height: calc(100vh - 210px); //80px|player + 50px|header + 80px|footer
 	}

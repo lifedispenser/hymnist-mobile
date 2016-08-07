@@ -1,0 +1,64 @@
+{% set header = {
+	title: '[Album Name]',
+	search: true
+} %}
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<div id="player1" class="aplayer"></div>
+
+
+<div class="playlist">
+	<div class="aplayerlist aplayerlist--shortened ">
+		<ul>
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+			{% include "../partials/list-item.njk" %}
+		</ul>
+	</div>
+</div>
+
+{% set bot = {
+	left: 'Upload Song(s)',
+	right: 'Save & Finish',
+	rhref: 'albums.html'
+} %}
+{% include "../partials/bot.njk" %}
+</form>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="js/APlayer.js"></script>
+
+<script type="text/javascript">
+	var ap = new APlayer({
+		element: document.getElementById('player1'),
+		autoplay: false,
+		theme: '#E77070',
+		music:
+			{
+        title: 'Song Name',                                          // Required, music title
+        author: 'Album Name',                          // Required, music author
+        url: 'http://devtest.qiniudn.com/Preparation.mp3',  // Required, music url
+        pic: 'http://devtest.qiniudn.com/Preparation.jpg',   // Optional, music picture
+        lrc: '[00:00.00]lrc here\n[00:01.00]aplayer\n[00:02.00]aplayer\n[00:04.00]aplayer'                   // Optional, lrc, see: ###With lrc
+    	}
+	});
+	$().ready(function() {
+		console.log("hi");
+		ap.init();
+	})
+
+</script>
+{% endblock %}

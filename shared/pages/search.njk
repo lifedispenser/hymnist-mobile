@@ -1,24 +1,17 @@
 {% set header = {
-	title: 'Search'
-} %}
-{% set bot = {
-	left: 'My Playlist',
-	lhref: 'playlist.html',
-	right: 'Search',
-	rhref: 'search.html',
-	search: true
+	title: 'Search',
+	now_playing: true
 } %}
 <!-- index.nunjucks -->
 {% extends "../partials/layout.njk" %}
 
 {% block content %}
-<div id="player1" class="aplayer"></div>
-
-<div class="playlist playlist--shortened">
+<div class="playlist playlist--shortened-double">
 	<ul>
-		{% include "../partials/list-item.njk" %}
-		{% include "../partials/list-item.njk" %}
-		{% include "../partials/list-item.njk" %}
+		{% include "../partials/album-item.njk" %}
+		{% include "../partials/album-item.njk" %}
+		{% include "../partials/album-item.njk" %}
+		{% include "../partials/album-item.njk" %}
 		{% include "../partials/list-item.njk" %}
 		{% include "../partials/list-item.njk" %}
 		{% include "../partials/list-item.njk" %}
@@ -37,6 +30,14 @@
 	</ul>
 </div>
 
+{% set bot = {
+	left: 'My Playlist',
+	lhref: 'playlist.html',
+	right: 'Search',
+	rhref: 'search.html',
+	search: true,
+	term: "Love"
+} %}
 {% include "../partials/bot.njk" %}
 
 {% endblock %}
@@ -46,12 +47,13 @@
 
 <script type="text/javascript">
 	var ap = new APlayer({
+		element: document.getElementById('player1'),
 		autoplay: false,
 		theme: '#E77070',
 		music:
 			{
-        title: 'Preparation',                                          // Required, music title
-        author: 'Hans Zimmer/Richard Harvey',                          // Required, music author
+        title: 'Song Name',                                          // Required, music title
+        author: 'Album Name',                          // Required, music author
         url: 'http://devtest.qiniudn.com/Preparation.mp3',  // Required, music url
         pic: 'http://devtest.qiniudn.com/Preparation.jpg',   // Optional, music picture
         lrc: '[00:00.00]lrc here\n[00:01.00]aplayer\n[00:02.00]aplayer\n[00:04.00]aplayer'                   // Optional, lrc, see: ###With lrc

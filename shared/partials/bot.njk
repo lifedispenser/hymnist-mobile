@@ -2,7 +2,7 @@
 bot--relative
 {% endif %}">
 	{% if bot.search %}
-		<input type="text" class="bot__search">
+		<input type="text" class="bot__search" value="{{bot.term}}">
 	{% endif %}
 	{% if bot.text %}
 		<div class="bot__text">

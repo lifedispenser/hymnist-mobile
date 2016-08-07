@@ -6394,6 +6394,14 @@ button.close {
     text-shadow: none;
     font-family: "Cherry Swash", cursive;
     font-size: 20px; }
+  .navbar-np {
+    font-size: 9px;
+    color: #FFF9DE !important;
+    text-shadow: none;
+    width: 40px;
+    text-align: right;
+    margin: 13px 5px 0;
+    display: inline-block; }
   .navbar-toggle {
     border: none; }
     .navbar-toggle .icon-bar {
@@ -6718,9 +6726,12 @@ button.close {
     transition: all 0.5s ease-out; }
 
 .aplayerlist, .playlist {
+  position: relative;
   max-height: calc(100vh - 170px);
   overflow-x: auto;
   transition: all 0.5s ease; }
+  .aplayerlist--shortened-double, .playlist--shortened-double {
+    max-height: calc(100vh - 260px); }
   .aplayerlist--shortened, .playlist--shortened {
     max-height: calc(100vh - 210px); }
   .aplayerlist--hide, .playlist--hide {

@@ -8,6 +8,15 @@
 		font-family: "Cherry Swash", cursive;
 		font-size: $fs-large;
 	}
+	&-np {
+		font-size: 9px;
+    color: #FFF9DE !important;
+    text-shadow: none;
+    width: 40px;
+    text-align: right;
+    margin: 13px 5px 0;
+    display: inline-block;
+	}
 	&-toggle {
 		border:none;
 		.icon-bar {
