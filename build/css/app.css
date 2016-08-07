@@ -6402,6 +6402,12 @@ button.close {
     text-align: right;
     margin: 13px 5px 0;
     display: inline-block; }
+  @media screen and (min-width: 768px) {
+    .navbar-header {
+      float: none !important; } }
+  @media screen and (min-width: 768px) {
+    .navbar-right {
+      margin-right: 0 !important; } }
   .navbar-toggle {
     border: none; }
     .navbar-toggle .icon-bar {
@@ -6409,6 +6415,9 @@ button.close {
       font-size: 20px; }
     .navbar-toggle:hover, .navbar-toggle:focus {
       background-color: rgba(254, 252, 236, 0.2) !important; }
+    @media screen and (min-width: 768px) {
+      .navbar-toggle {
+        display: block !important; } }
   .navbar-title {
     position: absolute;
     width: 200px;

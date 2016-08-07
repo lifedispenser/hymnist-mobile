@@ -17,6 +17,16 @@
     margin: 13px 5px 0;
     display: inline-block;
 	}
+	&-header {
+		@media screen and (min-width:768px) {
+			float:none!important;
+		}
+	}
+	&-right {
+		@media screen and (min-width:768px) {
+			margin-right:0!important;
+		}	
+	}
 	&-toggle {
 		border:none;
 		.icon-bar {
@@ -25,6 +35,9 @@
 		}
 		&:hover, &:focus {
 			background-color: $white-tint!important;
+		}
+		@media screen and (min-width:768px) {
+			display: block!important;
 		}
 	}
 	&-title {
