@@ -158,8 +158,8 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 		cursor: pointer !important;
 		&:hover {
 			.aplayer__volumebarwrap {
- 				display: block;
- 			}
+				display: block;
+			}
 		}
 	}
 	&__volumebarwrap {
@@ -375,6 +375,9 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 				background: $white-tint;
 			}
 		}
+		li.selected {
+			background: $white-tint;
+		}
 	}
 	&__cur {
 		display: none;
@@ -390,8 +393,16 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 		color: $white;
 		margin-right: 12px;
 		cursor: pointer;
+		line-height: 12px;
+		i {
+			bottom: -4px;
+			font-size: 22px;
+			position: relative;
+			margin-left: -4px;
+			margin-right: -8px;
+		}
 	}
-	&__author {
+	&__author, &__album {
 		color: $white;
 		float: right;
 		cursor: pointer;
@@ -399,6 +410,12 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 	&__title {
 		color:$white;
 		cursor: pointer;
+	}
+	&__time {
+		float: right;
+		color:$white;
+		cursor: pointer;	
+		margin-left:20px;
 	}
 	&__heart {
 		color:$white;

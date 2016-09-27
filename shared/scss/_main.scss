@@ -76,6 +76,8 @@
 	}
 
 	&__button {
+		display: block;
+		text-align:center;
 		margin-top:20px;
 		width:100%;
 		background-color: $red;

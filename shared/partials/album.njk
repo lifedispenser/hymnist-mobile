@@ -1,4 +1,4 @@
-<div class="album">
+<a class="album" href="0album.html">
 	<div class="album__picture" {% if album.picture %}
 		style="background: url({{album.picture}})"
 	{% endif %}>
@@ -9,4 +9,7 @@
 	<div class="album__author">
 		{{album.author}}
 	</div>
-</div>
+	<div class="album__time">
+		Uploaded: {{album.date}}
+	</div>
+</a>

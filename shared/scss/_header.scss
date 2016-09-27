@@ -16,6 +16,11 @@
     text-align: right;
     margin: 13px 5px 0;
     display: inline-block;
+    i {
+    	font-size:22px;
+    	position: relative;
+    	left:-8px;
+    }
 	}
 	&-header {
 		@media screen and (min-width:768px) {

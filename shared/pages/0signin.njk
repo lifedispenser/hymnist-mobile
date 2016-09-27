@@ -1,0 +1,19 @@
+{% set header = {
+	nomenu: false
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<div class="main">
+	<h2 class="main__title"><b>Sign in</b> to favorite albums and songs.</h2>
+	<div class="wrap">
+		<label href="#" class="main__label">Email</label>
+		<input type="text" name="name" value="" class="main__input"/>
+		<label href="#" class="main__label">Password</label>
+		<input type="text" name="name" value="" class="main__input"/>
+		<a href="1home.html" class="main__button">Sign In</a>
+		<a href="signup.html" class="main__link main__link--small">Or Sign Up</a>
+	</div>
+</div>
+{% endblock %}

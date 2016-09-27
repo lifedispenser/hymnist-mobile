@@ -1,0 +1,30 @@
+# add total time, play button, and date uploaded
+# add album page
+{% set header = {
+title: 'Recent Albums',
+nomenu: false
+} %}
+{% set bot = {
+left: 'Load More Albums'
+} %}
+{% extends "../partials/layout.njk" %}
+{% block content %}
+	<div class="albums">
+		{% set album = {
+		title: 'Green Room',
+		author: 'Titus J, Spencer Y, Phil B, Mary J',
+		date: "8 days ago"
+		} %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+	</div>
+	{% include "../partials/bot.njk" %}
+{% endblock %}

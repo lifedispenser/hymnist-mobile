@@ -1,0 +1,18 @@
+{% set header = {
+	title: "Radio Channels"
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+
+{% block content %}
+<div class="main">
+	<br><br>
+	<a href="albums.html" class="main__link main__link--nospace">Recent Albums</a>
+	<a href="radio-yp.html" class="main__link main__link--nospace">New Songs</a>
+	<a href="radio-classical.html" class="main__link main__link--nospace">Classical Songs</a>
+	<a href="radio-gospel.html" class="main__link main__link--nospace">Gospel Songs</a>
+	<a href="radio-personal.html" class="main__link main__link--nospace">Personal Time</a>
+	<a href="favorites.html" class="main__link main__link--nospace">My Favorites</a>
+</div>
+{% include "../partials/search.njk" %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% set header = {
+title: 'Search',
+nomenu: false
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+{% block content %}
+	{% set bot = {
+	left: 'Songs (23)',
+	lhref: '0search.html',
+	right: 'Albums (5)',
+	rhref: '0search-albums.html',
+	relative: true
+	} %}
+	{% include "../partials/bot.njk" %}
+	<div class="albums">
+		{% set album = {
+		title: 'Green Room',
+		author: 'Titus J, Spencer Y, Phil B, Mary J',
+		date: "8 days ago"
+		} %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+	</div>
+	<div class="bot">
+		<div class="bot__text">
+			Search Again:
+		</div>
+		<input type="text" class="bot__search" value="Love">
+	</div>
+{% endblock %}

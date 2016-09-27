@@ -1,7 +1,13 @@
 $h: 80px;
+.albums {
+	position: relative;
+	max-height: calc(100vh - 95px);
+	overflow: auto;
+}
 .album {
 	width:100%;
 	height:$h;
+	display: block;
 	margin-top: 5px;
 
 	&:hover, &:focus {
@@ -17,7 +23,7 @@ $h: 80px;
 	}
 	&__title {
 		margin-left:$h+10;
-		padding:12px 0 3px;
+		padding:6px 0 3px;
 		color:$white;
 		font-size: $fs-h5;
 	}
@@ -25,5 +31,10 @@ $h: 80px;
 		margin-left:$h+10;
 		color:$white;
 		font-size: $fs-small;
+	}
+	&__time {
+		color:$white;
+		font-size: $fs-small;
+		margin-left:$h+10;
 	}
 }
