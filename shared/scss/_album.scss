@@ -37,4 +37,8 @@ $h: 80px;
 		font-size: $fs-small;
 		margin-left:$h+10;
 	}
+	&__heart {
+		padding-right: 20px;
+		float:right;
+	}
 }

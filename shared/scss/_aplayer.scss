@@ -418,10 +418,11 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
 		margin-left:20px;
 	}
 	&__heart {
+		font-size:16px;
 		color:$white;
 		float:right;
 		cursor:pointer;
-		padding-left: 15px;
+		padding-left: 20px;
 	}
 
 	&--light {

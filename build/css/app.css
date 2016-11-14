@@ -6411,9 +6411,11 @@ button.close {
   @media screen and (min-width: 768px) {
     .navbar-header {
       float: none !important; } }
-  @media screen and (min-width: 768px) {
-    .navbar-right {
-      margin-right: 0 !important; } }
+  .navbar-right {
+    margin-right: 20px !important; }
+    @media screen and (min-width: 768px) {
+      .navbar-right {
+        margin-right: 0 !important; } }
   .navbar-toggle {
     border: none; }
     .navbar-toggle .icon-bar {
@@ -6487,6 +6489,9 @@ button.close {
     color: #FEFCEC;
     font-size: 14px;
     margin-left: 90px; }
+  .album__heart {
+    padding-right: 20px;
+    float: right; }
 
 @font-face {
   font-family: 'aplayer-fontello';
@@ -6811,10 +6816,11 @@ button.close {
     cursor: pointer;
     margin-left: 20px; }
   .aplayerlist__heart, .playlist__heart {
+    font-size: 16px;
     color: #FEFCEC;
     float: right;
     cursor: pointer;
-    padding-left: 15px; }
+    padding-left: 20px; }
   .aplayerlist--light, .playlist--light {
     background: rgba(136, 158, 220, 0.7); }
     .aplayerlist--light__cur, .playlist--light__cur {

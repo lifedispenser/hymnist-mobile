@@ -1,0 +1,58 @@
+
+{% set header = {
+title: 'Your Favorited Songs',
+current_player: true,
+nomenu: false
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+{% block content %}
+  <div class="playlist">
+    <div class="aplayerlist aplayerlist--shortened ">
+      <ul>
+        <li>
+          <span class="aplayerlist__index">1</span>
+          <span class="aplayerlist__title">Song Title</span>
+          <span class="aplayerlist__heart"><i class="fa fa-heart" aria-hidden="true"></i></span>
+          <span class="aplayerlist__time">1:38</span>
+          <span class="aplayerlist__album">Album</span>
+        </li>
+        <li class="selected">
+          <span class="aplayerlist__index"><i class="fa fa-pause-circle" aria-hidden="true"></i></span>
+          <span class="aplayerlist__title">Song Title</span>
+          <span class="aplayerlist__heart"><i class="fa fa-heart" aria-hidden="true"></i></span>
+          <span class="aplayerlist__time">2:47</span>
+          <span class="aplayerlist__album">Album</span>
+        </li>
+        <li>
+          <span class="aplayerlist__index">3</span>
+          <span class="aplayerlist__title">Song Title</span>
+          <span class="aplayerlist__heart"><i class="fa fa-heart" aria-hidden="true"></i></span>
+          <span class="aplayerlist__time">4:51</span>
+          <span class="aplayerlist__album">Album</span>
+        </li>
+        <li>
+          <span class="aplayerlist__index">4</span>
+          <span class="aplayerlist__title">Song Title</span>
+          <span class="aplayerlist__heart"><i class="fa fa-heart" aria-hidden="true"></i></span>
+          <span class="aplayerlist__time">2:01</span>
+          <span class="aplayerlist__album">Album</span>
+        </li>
+        <li>
+          <span class="aplayerlist__index">5</span>
+          <span class="aplayerlist__title">Song Title</span>
+          <span class="aplayerlist__heart"><i class="fa fa-heart" aria-hidden="true"></i></span>
+          <span class="aplayerlist__time">1:16</span>
+          <span class="aplayerlist__album">Album</span>
+        </li>
+        <li>
+          <span class="aplayerlist__index">6</span>
+          <span class="aplayerlist__heart"><i class="fa fa-heart" aria-hidden="true"></i></span>
+          <span class="aplayerlist__title">Song Title</span>
+          <span class="aplayerlist__time">2:14</span>
+          <span class="aplayerlist__album">Album</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

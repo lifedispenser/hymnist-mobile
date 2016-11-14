@@ -1,0 +1,14 @@
+{% set header = {
+title: '',
+nomenu: false,
+name: "lifedispenser@gmail.com"
+} %}
+<!-- index.nunjucks -->
+{% extends "../partials/layout.njk" %}
+{% block content %}
+	<div class="main">
+		<h2 class="main__title">Have any questions? See our <a href="faq.html">FAQ</a> or contact us at info@hymnist.io</h2>
+		<a href="1favalbums.html" class="main__link main__link--nospace" style="padding:10px 0;">Change Password</a>
+		<a href="1favalbums.html" class="main__link main__link--nospace" style="padding:10px 0;">Log Out</a>
+	</div>
+{% endblock %}

@@ -1,10 +1,10 @@
-<a class="album" href="0album.html">
+<a class="album" href="{{ album.id }}album.html">
 	<div class="album__picture" {% if album.picture %}
 		style="background: url({{album.picture}})"
 	{% endif %}>
 	</div>
 	<div class="album__title">
-		{{album.title}}
+		{{album.title}} {% if album.favorites %} <span class="album__heart"><i class="fa fa-heart{% if album.noheart %}-o {% endif %}" aria-hidden="true"></i></span> {% endif %}
 	</div>
 	<div class="album__author">
 		{{album.author}}

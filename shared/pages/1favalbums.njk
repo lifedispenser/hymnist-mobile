@@ -1,0 +1,27 @@
+{% set header = {
+title: 'Your Favorite Albums',
+nomenu: false
+} %}
+{% extends "../partials/layout.njk" %}
+{% block content %}
+	<div class="albums">
+		{% set album = {
+		title: 'Green Room',
+		author: 'Titus J, Spencer Y, Phil B, Mary J',
+		date: "8 days ago",
+		id: '1',
+		favorites: true, 
+		heart: true
+		} %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+		{% include "../partials/album.njk" %}
+	</div>
+{% endblock %}
